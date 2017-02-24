@@ -12,5 +12,5 @@ while (true)
     GET $url | grep "Me gusta en este" | cut -d '=' -f 5 | head -n 1 | cut -d ' ' -f 12
     echo " "
     echo -n "No me gusta: "
-    GET $url | grep "No me gusta en este" | cut -d '=' -f 5 | head -n 1 | cut -d ' ' -f 12
+    GET $url | grep "No me gusta en este" | cut -d '=' -f 5 | head -n 1 | cut -d ' ' -f 13
 done
