@@ -28,6 +28,12 @@ void Menu::opcionesUsuario()
       system("./ingresos.sh");
     break;
 
+    case 3:
+      system("clear");
+      system("./descripcionUsuario.sh");
+      cout << "-----------------------------------------------\n\n";
+    break;
+
     default:
       cout << "\nOpción Incorrecta...\n";
     break;
@@ -39,14 +45,19 @@ void Menu::opcionesUsuario()
 
 void Menu::menuUsuario()
 {
-  cout << "         DATOS DEL USUARIO\n\n";
-  cout << "1. Ingresos mensuales estimados.\n";
-  cout << "2. Monitorizar video.\n";
-  cout << "\n0.Salir\n";
-  cout << "-------------------------------------\n";
-  cout << "Opcion: ";
-  cin >> opcion_;
-  opcionesUsuario();
+  while (true)
+  {
+    cout << "=====================================\n";
+    cout << "         DATOS DEL USUARIO\n\n";
+    cout << "1. Ingresos mensuales estimados.\n";
+    cout << "2. Monitorizar video.\n";
+    cout << "3. Descripción general de usuario\n";
+    cout << "\n0.Salir\n";
+    cout << "-------------------------------------\n";
+    cout << "Opcion: ";
+    cin >> opcion_;
+    opcionesUsuario();
+  }
 }
 
 void Menu::mostrarUsuario()

@@ -18,4 +18,4 @@ echo -n "Suscriptores actuales en el canal: "
 GET https://channelmeter.com/channels/$usuario | grep "Created Date" | cut -d '&' -f 4 | cut -d '<' -f 26 | cut -d '>' -f 2
 echo " "
 echo -n "Fecha del último vídeo subido: "
-GET https://channelmeter.com/channels/elrubiusomg | grep "Created Date" | cut -d '&' -f 4 | cut -d '<' -f 32 | cut -d '>' -f 2
+GET https://channelmeter.com/channels/$usuario | grep "Created Date" | cut -d '&' -f 4 | cut -d '<' -f 32 | cut -d '>' -f 2
