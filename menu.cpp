@@ -6,6 +6,7 @@ Menu::Menu()
 Menu::~Menu()
 {
   system("rm -r usuario.txt");
+  cout << "Este programa ha sido elaborado por Marcelo Raúl Vázquez Pereyra\n\n";
 }
 
 void Menu::menuPrincipal()
