@@ -4,7 +4,9 @@ Menu::Menu()
 {}
 
 Menu::~Menu()
-{}
+{
+  system("rm -r usuario.txt");
+}
 
 void Menu::menuPrincipal()
 {
@@ -17,9 +19,42 @@ void Menu::menuPrincipal()
   cin >> opcion_;
 }
 
+void Menu::opcionesUsuario()
+{
+  switch (opcion_)
+  {
+    case 1:
+      system("clear");
+      system("./ingresos.sh");
+    break;
+
+    default:
+      cout << "\nOpción Incorrecta...\n";
+    break;
+
+    case 0:
+      salirPrograma();
+  }
+}
+
+void Menu::menuUsuario()
+{
+  cout << "         DATOS DEL USUARIO\n\n";
+  cout << "1. Ingresos mensuales estimados.\n";
+  cout << "2. Monitorizar video.\n";
+  cout << "\n0.Salir\n";
+  cout << "-------------------------------------\n";
+  cout << "Opcion: ";
+  cin >> opcion_;
+  opcionesUsuario();
+}
+
 void Menu::mostrarUsuario()
 {
+  system("clear");
   system("./usuario.sh");
+  cout << "-----------------------------------------------\n\n";
+  menuUsuario();
 }
 
 int Menu::salirPrograma()
@@ -32,7 +67,6 @@ int Menu::salirPrograma()
 
 void Menu::mostrarMenu()
 {
-
   switch (opcion_)
   {
     case 1:
