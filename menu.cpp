@@ -28,6 +28,11 @@ void Menu::opcionesUsuario()
       system("./ingresos.sh");
     break;
 
+    case 2:
+      system("clear");
+      system("./monitorizacion.sh");
+    break;
+
     case 3:
       system("clear");
       system("./descripcionUsuario.sh");
