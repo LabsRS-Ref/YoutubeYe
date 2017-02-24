@@ -45,7 +45,7 @@ void Menu::opcionesUsuario()
 
 void Menu::menuUsuario()
 {
-  while (true)
+  while (opcion_ != 0)
   {
     cout << "=====================================\n";
     cout << "         DATOS DEL USUARIO\n\n";
@@ -56,6 +56,7 @@ void Menu::menuUsuario()
     cout << "-------------------------------------\n";
     cout << "Opcion: ";
     cin >> opcion_;
+
     opcionesUsuario();
   }
 }
@@ -72,7 +73,6 @@ int Menu::salirPrograma()
 {
   cout << "\nSaliendo del programa...\n\n";
   usleep(2000000);
-
   return 0;
 }
 
