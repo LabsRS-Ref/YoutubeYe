@@ -2,6 +2,10 @@
 
 echo -n "Introduzca URL del vídeo en cuestión: "
 read url
+echo " "
+echo -n "Análisis del vídeo: "
+GET $url | grep "eow-title" | cut -d '=' -f 5 | cut -d '"' -f 2
+
 while (true)
   do
     echo "----------------------------------------------------------"
