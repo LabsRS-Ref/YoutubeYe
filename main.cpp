@@ -1,3 +1,6 @@
+//Hecho por Marcelo Raúl Vázquez Pereyra
+//Link del proyecto: https://github.com/Marcelorvp/YoutubeYe
+
 #include "menu.hpp"
 
 void menuPrincipal();
