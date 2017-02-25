@@ -5,6 +5,11 @@ read usuario
 echo $usuario >> usuario.txt
 echo " "
 echo "-----------------------------------------------"
+echo -n "---- Biografía ----"
+echo " "
+echo " "
+GET https://www.youtube.com/user/$usuario/about | grep "<meta name=" | head -n 2 | cut -d '=' -f 3 | cut -d '"' -f 2 | tail -n 1
+echo "-----------------------------------------------"
 echo -n "El canal fue creado en: "
 GET https://channelmeter.com/channels/$usuario | grep "Created Date" | cut -d '&' -f 4 | cut -d '>' -f 8 | cut -d '<' -f 1
 echo " "
