@@ -9,8 +9,8 @@
 - Total channel views <br>
 - Suscribers <br>
 
-###You have a makefile, so you can make the executable doing:
+###You have a makefile, so you can make the executable doing 'make'
 
-- make
 ###Once you have the executable, you only need to run the following command:
-```./YoutubEye```
+
+- ./YoutubEye
