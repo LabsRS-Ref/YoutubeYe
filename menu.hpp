@@ -3,10 +3,12 @@
 
 using namespace std;
 
+typedef unsigned short int mi_int;
+
 class Menu
 {
 
-  int opcion_;
+  mi_int opcion_;
 
 public:
 
